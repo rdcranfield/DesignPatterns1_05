@@ -23,11 +23,14 @@ public class Particle{
         this.framesLeft = framesLeft;
     }
 
-    public void animate(){
+    public boolean animate(){
         if(isAlive()){
             x += velocity;
             framesLeft--;
+
+            return false;
         }
+        return true;
     }
 
     public boolean isAlive(){
